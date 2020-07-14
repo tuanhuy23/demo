@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Creative - Start Bootstrap Theme</title>
+    <title>Ưu đãi mặt nạ timeless truth mask bright</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
@@ -25,28 +25,28 @@
         <div class="col-md-8 header-menu">
           <div class="widget">
             <div class="widget-item widget-action"><span>NHẬN ƯU ĐÃI</span></div>
-            <div class="widget-item widget-call"><i class="fa fa-phone" aria-hidden="true" style="margin-right:5px;"></i>1900 1234</div>
+            <div class="widget-item widget-call"><i class="fa fa-phone" aria-hidden="true" style="margin-right:5px;"></i>0918 913 455</div>
           </div>
           <div class="nav-menu">
             <div class="main-menu" id="menu">
               <ul>
                 <li>
-                  <a href="#">Trang chủ</a>
+                  <a href="#trang-chu" class="activeLinkMenu">Trang chủ</a>
                 </li>
                 <li>
-                  <a href="#">Tình trạng</a>
+                  <a href="#tinh-trang">Tình trạng</a>
                 </li>
                 <li>
-                  <a href="#">Khuyến mại</a>
+                  <a href="#khuyen-mai">Khuyến mại</a>
                 </li>
                 <li>
-                  <a href="#">Công dụng</a>
+                  <a href="#thanh-phan">Thành phần</a>
                 </li>
                 <li>
-                  <a href="#">Thành phần</a>
+                  <a href="#cong-dung">Công dụng</a>
                 </li>
                 <li>
-                  <a href="#">Đặc tính</a>
+                  <a href="#dac-tinh">Đặc tính</a>
                 </li>
               </ul>
             </div>
@@ -73,26 +73,26 @@
         <a href="#" class="menu-mb-item">Khuyến mại</a>
       </li>
       <li>
-        <a href="#" class="menu-mb-item">Công dụng</a>
+        <a href="#" class="menu-mb-item">Thành phần</a>
       </li>
       <li>
-        <a href="#" class="menu-mb-item">Thành phần</a>
+        <a href="#" class="menu-mb-item">Công dụng</a>
       </li>
       <li>
         <a href="#" class="menu-mb-item">Đặc tính</a>
       </li>
     </ul>
     <div class="widget-item-mb widget-action-mb"><span>NHẬN ƯU ĐÃI</span></div>
-    <div class="widget-item-mb widget-call-mb"><i class="fa fa-phone" aria-hidden="true" style="margin-right:5px;"></i>1900 1234</div>
+    <div class="widget-item-mb widget-call-mb"><i class="fa fa-phone" aria-hidden="true" style="margin-right:5px;"></i>0918 913 455</div>
   </div>
-  <div class="body-main">
+  <div class="body-main" id="trang-chu">
     <div class="container custom">
       <div class="row">
         <div class="col-md-6">
             <img src="img/LDP-slogan.png" class="top-img" alt="slogan">
             <img src="img/LDP-2.png" class="bottom-img" alt="offer">
             <div class="buy-now">
-              MUA NGAY
+              <a href="#dang-ky">MUA NGAY</a>
             </div>
         </div>
         <div class="col-md-6 img-banner">
@@ -109,7 +109,7 @@
       </div>
     </div>
   </div>
-  <div class="body-main-status">
+  <div class="body-main-status" id="tinh-trang">
     <div class="container custom">
       <div class="row">
         <div class="col-md-12">
@@ -187,7 +187,7 @@
       </div>
     </div>
   </div>
-  <div class="body-main-offer">
+  <div class="body-main-offer" id="khuyen-mai">
     <div class="container custom">
       <div class="row">
         <div class="col-md-12 col-lg-12">
@@ -237,7 +237,7 @@
       </div>
     </div>
   </div>
-  <div class="body-main-property">
+  <div class="body-main-property" id="thanh-phan">
     <div class="container">
       <div class="row">
         <div class="col-md-3 property-left">
@@ -347,7 +347,7 @@
     </div>
   </div>
 </div>
-<div class="body-main-uses">
+<div class="body-main-uses" id="cong-dung">
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-sm-12 uses-left">
@@ -408,7 +408,7 @@
     </div>
   </div>
 </div>
-<div class="body-main-effect">
+<div class="body-main-effect" id="dac-tinh">
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-sm-12 effect-header">
@@ -450,7 +450,7 @@
     </div>
   </div>
 </div>
-<div class="body-main-footer">
+<div class="body-main-footer" id="dang-ky">
   <div class="container">
     <div class="row">
       <div class="col-md-6 footer-left">
@@ -501,6 +501,21 @@
           $('div.overplay').removeClass('overplayactive');
           $('#side-menu-mb').removeClass('active');
       });
+      $("a").on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+            window.location.hash = hash;
+          });
+        }
+      })
+      $("#menu ul li a").on('click', function(event) {
+        $("#menu ul li a").removeClass('activeLinkMenu');
+        $(this).addClass('activeLinkMenu');
+      })
     })
   </script>
 </body>

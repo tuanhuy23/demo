@@ -103,7 +103,10 @@ div.nav-menu ul li a{
   font-weight: bold;
   color: #14141c;
 }
-div.nav-menu ul li a:hover{
+div.nav-menu ul li a:hover {
+  color: #fea519;
+}
+div.nav-menu ul li a.activeLinkMenu {
   color: #fea519;
   border-bottom: 5px solid #f7a925;
 }
@@ -122,9 +125,16 @@ div.buy-now {
       margin-top: 35px;
       margin-bottom: 90px;
 }
+div.buy-now a{
+  text-decoration: none;
+  color: #ffffff;
+}
 div.buy-now:hover {
   color: #13131b;
   background-color: #ffffff;
+}
+div.buy-now:hover a{
+  color: #13131b;
 }
 div.body-main {
   height: 594px;
@@ -658,6 +668,18 @@ h5.footer-text-2 {
   margin-top: 15px;
   margin-bottom: 0px;
 }
+div.widget-action:hover{
+  color: #f2a725;
+  background-color: #14141c;
+  border-color: #14141c;
+  cursor: pointer;
+}
+div.widget-call:hover{
+  color: #ffffff;
+  background-color: #f2a725;
+  border-color: #f2a725;
+  cursor: pointer;
+}
 @media only screen and (max-width: 1199px) {
   div.header {
     height: 90px;
@@ -975,7 +997,7 @@ h5.footer-text-2 {
   }
   div.body-main-mb{
     display: block;
-    height: 564px;
+    height: 339px;
   }
   div.body-main-mb img {
     width: 100%;
